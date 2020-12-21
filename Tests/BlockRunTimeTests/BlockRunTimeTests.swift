@@ -2,14 +2,14 @@ import XCTest
 @testable import BlockRunTime
 
 final class BlockRunTimeTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(BlockRunTime().text, "Hello, World!")
+
+    func testCount() {
+        let test1  = blockRunTime(count: 1000){ sin(1.0) }
+        let test10 = blockRunTime(count: 10000){ sin(1.0) }
+        XCTAssertGreaterThan(test10, test1)
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("Count test", testCount),
     ]
 }

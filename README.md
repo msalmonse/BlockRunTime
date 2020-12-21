@@ -1,3 +1,3 @@
 # BlockRunTime
 
-A description of this package.
+Run a block and return it's duration
